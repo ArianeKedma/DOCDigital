@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: linear-gradient(
+    to bottom,
+    #145ff5 0%,
+    #091a80 60%,
+    #000814 100%
+  );
+  --foreground: #00020e;
 }
 
 @theme inline {
@@ -14,8 +19,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: linear-gradient(
+      to bottom,
+      #213575 0%,
+      #031944 60%,
+      #010722 100%
+    );
+    --foreground: #e4e9f5;
   }
 }
 
@@ -23,4 +33,23 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes pulse-hover {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+}
+
+.pulse-hover:hover {
+  animation: pulse-hover 1s ease-in-out infinite;
+}
+
+.text-center p-6{
+  text-align: center;
 }
