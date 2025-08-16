@@ -1,3 +1,4 @@
+/* globals.css */
 @import "tailwindcss";
 
 :root {
@@ -53,3 +54,4 @@ body {
 .text-center p-6{
   text-align: center;
 }
+
